@@ -1,0 +1,23 @@
+{% extends 'kerangka.html' %}
+
+{% block badan %}
+<div class="create-article">
+  <h2>Create an awesome new article</h2>
+  <form class="site-form" action="{% url 'article_app:create' %}" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ form }}
+
+    <button type="submit">Create</button>
+
+  </form>
+</div>
+
+<form class="" action="index.html" method="post">
+  <input type="text" name="test123" value="test">
+</form>
+
+{% load static from staticfiles %}
+<script src="{% static 'js/slugify.js' %}"></script>
+{% endblock %}

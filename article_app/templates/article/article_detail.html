@@ -1,0 +1,13 @@
+{% extends 'kerangka.html' %}
+
+{% block badan %}
+<div class="article_detail">
+  <div class="article">
+    <img src="{{ article.thumb.url }}" alt="{{ article.thumb }}">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.body }}</p>
+    <p>{{ article.date }}</p>
+    <p>{{ article.jkt_time }}</p>    
+  </div>
+</div>
+{% endblock %}
